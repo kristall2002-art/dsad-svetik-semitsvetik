@@ -1,0 +1,92 @@
+/* Детсадовские блоки поверх base.css: иллюстрации, ссылка на «Сведения», режим дня, группы, цены, раздел «Сведения» */
+.ill{width:100%;overflow:hidden;border-radius:var(--ri,var(--r,20px));background:var(--soft)}
+.ill svg{display:block;width:100%;height:100%}
+.himg .ill{aspect-ratio:4/3.2}.cut .ill{aspect-ratio:1/1;border-radius:50%}.aimg .ill,.aimg img{aspect-ratio:4/3;width:100%;object-fit:cover;border-radius:var(--r,16px)}
+.edimgs .ill{height:340px}
+.svlink{display:flex;align-items:center;gap:18px;padding:22px 26px;border-radius:var(--r,16px);background:var(--card);text-decoration:none;box-shadow:var(--sh,0 10px 30px -18px rgba(0,0,0,.35));border:2px solid var(--accent);min-width:0}
+.svlink .svi{flex:0 0 52px;height:52px;border-radius:14px;display:grid;place-items:center;background:var(--accent);color:var(--onaccent,#fff)}
+.svlink .svi svg{width:26px;height:26px}
+.svlink span:nth-child(2){display:flex;flex-direction:column;gap:4px;min-width:0;flex:1}
+.svlink b{font-family:var(--fh);font-size:1.15rem;line-height:1.2}
+.svlink small{color:var(--muted)}
+.svlink .arr{font-size:1.6rem;color:var(--accent);flex:0 0 auto}
+.day{list-style:none;padding:0;margin:0}
+.day li{display:grid;grid-template-columns:118px minmax(0,1fr);gap:14px;padding:10px 0;border-bottom:1px solid var(--line,rgba(127,127,127,.2))}
+.day li b{color:var(--accent)}
+.day.tl li{border:0;position:relative;padding-left:26px}
+.day.tl li::before{content:'';position:absolute;left:0;top:17px;width:12px;height:12px;border-radius:50%;background:var(--accent)}
+.day.tl li::after{content:'';position:absolute;left:5px;top:31px;bottom:-14px;width:2px;background:var(--line,rgba(127,127,127,.3))}
+.day.tl li:last-child::after{display:none}
+.dayw,.gw{display:grid;grid-template-columns:minmax(0,1fr) minmax(0,1.2fr);gap:40px;align-items:start}
+.gcard .age{display:inline-block;background:var(--accent);color:var(--onaccent,#fff);border-radius:999px;padding:5px 14px;font-weight:800;margin-bottom:12px}
+.incl{list-style:none;padding:0;margin:0;display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:8px 18px}
+.incl li{position:relative;padding-left:26px}
+.incl li::before{content:'✓';position:absolute;left:0;color:var(--accent);font-weight:900}
+.pbox .lead{margin:6px 0 16px}
+.pcall{display:flex;flex-direction:column;gap:4px;margin:0 0 22px}
+.pcall .xl,.ctiles .xl{font-family:var(--fh);font-size:clamp(1.3rem,2.4vw,1.9rem);font-weight:800;text-decoration:none;color:var(--accent)}
+.dayt td:first-child{width:150px;color:var(--accent);text-align:left!important}
+.dayt td:last-child{text-align:left!important;font-weight:500!important;white-space:normal!important}
+.team .doc h3{font-size:1.02rem}
+/* раздел «Сведения» */
+.svnav{display:flex;flex-wrap:wrap;gap:8px;margin:0 0 26px}
+.svnav a{font-size:.86rem;padding:7px 12px;border-radius:999px;background:var(--soft);text-decoration:none;font-weight:600}
+.svacc details.acc summary{font-size:1.05rem}
+.svgrid{display:grid;grid-template-columns:300px minmax(0,1fr);gap:40px;align-items:start}
+.svside{position:sticky;top:96px;display:flex;flex-direction:column;border-left:3px solid var(--line,rgba(127,127,127,.25))}
+.svside a{padding:8px 0 8px 16px;text-decoration:none;font-size:.92rem;line-height:1.3;margin-left:-3px;border-left:3px solid transparent}
+.svside a:hover{border-left-color:var(--accent);color:var(--accent)}
+.svs{padding:0 0 34px;margin:0 0 34px;border-bottom:1px solid var(--line,rgba(127,127,127,.2));scroll-margin-top:100px}
+.svs h2{font-size:clamp(1.3rem,2.4vw,1.7rem)}
+.svdl{display:grid;grid-template-columns:minmax(0,260px) minmax(0,1fr);gap:0;margin:0}
+.svdl dt,.svdl dd{padding:10px 0;border-bottom:1px solid var(--line,rgba(127,127,127,.18));margin:0;min-width:0;overflow-wrap:anywhere}
+.svdl dt{color:var(--muted);font-weight:600;padding-right:18px}
+.docs{list-style:none;padding:0;margin:14px 0 0;display:grid;gap:8px}
+.docs li{display:flex;gap:12px;align-items:flex-start;padding:12px 14px;border-radius:12px;background:var(--soft)}
+.docs li svg{width:22px;height:22px;flex:0 0 22px;color:var(--accent)}
+.docs li span{display:flex;flex-direction:column;min-width:0}
+.docs small{color:var(--muted);font-size:.8rem}
+.svteam{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:12px;margin-bottom:12px}
+.svteam div{background:var(--soft);border-radius:12px;padding:14px;display:flex;flex-direction:column;gap:4px;min-width:0}
+.svteam span{color:var(--muted);font-size:.9rem}
+.svcards a.card{display:flex;flex-direction:column;gap:8px;text-decoration:none;min-width:0}
+.svcards .n{font-family:var(--fh);font-size:1.6rem;font-weight:800;color:var(--accent);line-height:1}
+.svcards b{line-height:1.3}
+.svbody{margin-top:34px;display:grid;gap:20px}
+.svbody .svs{border:0;margin:0;padding:28px}
+.up{display:inline-block;margin-top:16px;color:var(--accent);font-weight:700;text-decoration:none}
+.bento a.t{text-decoration:none}
+@media (max-width:980px){
+  .dayw,.gw,.svgrid{grid-template-columns:minmax(0,1fr)}
+  .svside{position:static}
+  .svteam{grid-template-columns:repeat(2,minmax(0,1fr))}
+}
+@media (max-width:560px){
+  .incl,.svteam,.svdl{grid-template-columns:minmax(0,1fr)}
+  .svdl dt{border-bottom:0;padding-bottom:0}
+  .day li{grid-template-columns:minmax(0,1fr);gap:2px}
+  .svlink{padding:16px;gap:12px}.svlink .svi{flex-basis:42px;height:42px}.svlink .arr{display:none}
+  .edimgs .ill{height:200px}
+}
+/* шапка: длинное «Сведения об образовательной организации» в меню */
+.logo{flex:0 0 auto}.logo b{white-space:nowrap}.logo small{white-space:nowrap}
+.hdr .wrap{gap:20px}
+.hdr .nav{gap:20px}.hdr .nav a{white-space:nowrap;font-size:.95rem}
+.hdr .nav a[data-sv]{color:var(--accent)}
+@media (max-width:1360px){.hdr .hphone.d{display:none}}
+@media (max-width:1180px){
+  .hdr .nav,.hdr .a11y.d{display:none}
+  .hdr .burger{display:block}
+  .hdr.open .nav{display:flex;position:absolute;left:0;right:0;top:100%;flex-direction:column;gap:0;background:var(--hbg,var(--bg));padding:8px 24px 18px;box-shadow:0 20px 30px -20px rgba(0,0,0,.4)}
+  .hdr.open .nav a{padding:12px 0;border-bottom:1px solid rgba(127,127,127,.2);white-space:normal}
+  .hdr.center .wrap{flex-wrap:nowrap;justify-content:flex-start;padding-top:0}
+  .hdr.center .logo{align-items:flex-start;width:auto}
+}
+@media (max-width:1180px){
+  body.sb .side{display:none}
+  body.sb .sbmain{margin-left:0}
+  body.sb .mobonly{display:block}
+  .svgrid{grid-template-columns:minmax(0,1fr)}
+  .svside{position:static}
+}
+.csplit .card .btns .btn{white-space:normal;text-align:center}
